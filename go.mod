@@ -1,4 +1,4 @@
-module goCloud
+module myClient
 
 go 1.17
 

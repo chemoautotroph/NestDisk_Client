@@ -1,13 +1,9 @@
 package main
 
 import (
-	"goCloud/client"
-	"goCloud/server"
+	"myClient/client"
 )
 
 func main(){
-	go server.InitServer()
-
-
 	client.Client()
 }

@@ -1,15 +1,17 @@
 package client
 
 import (
-	"goCloud/config"
 	"log"
+	"myClient/config"
 	"net"
+	"strconv"
 	"time"
 )
 
 func Client(){
-	for i:=1; i<10; i++{
+	for i:=0; i<1; i++{
 		conn := establishConn(i)
+		// time.Sleep(2*time.Second)
 		if conn != nil{
 			// fmt.Println("conn is ",conn)
 		}
@@ -25,7 +27,7 @@ func establishConn(i int) net.Conn{
 	}
 
 	log.Println(i, "connect to server ok")
-	_, err = conn.Write([]byte("nky"))
+	_, err = conn.Write([]byte("nky"+strconv.Itoa(i)))
 	if err != nil {
 		log.Fatalln("conn.Write Unexpected Error")
 		return nil
