@@ -1,9 +1,8 @@
 package main
 
-import (
-	"myClient/client"
-)
+import "myClient/client"
 
 func main(){
-	client.Client()
+	client.Init()
+	//client.UserTest()
 }
