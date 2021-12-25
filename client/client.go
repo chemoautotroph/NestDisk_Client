@@ -36,6 +36,7 @@ func establishConn(senderChannel chan []byte ,i ...string) net.Conn {
 	if i != nil {
 		log.Println(i, "connect to server ok")
 	}
+
 	sendCommand(conn, senderChannel)
 
 	return conn
